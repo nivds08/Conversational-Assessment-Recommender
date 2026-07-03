@@ -1,0 +1,425 @@
+{
+  "exact_mean": 0.0,
+  "fuzzy_mean": 0.0,
+  "results": [
+    {
+      "trace": "C1.md",
+      "recall_exact": 0.0,
+      "recall_fuzzy": 0.0,
+      "turns": 4,
+      "expected": [
+        "Occupational Personality Questionnaire OPQ32r",
+        "OPQ Universal Competency Report 2.0",
+        "OPQ Leadership Report"
+      ],
+      "got": [],
+      "transcript": [
+        {
+          "turn": 1,
+          "user": "We need a solution for senior leadership.",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        },
+        {
+          "turn": 2,
+          "user": "The pool consists of CXOs, director-level postions; people with more than 15 years of experience.",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        },
+        {
+          "turn": 3,
+          "user": "Selection \u2014 comparing candidates against a leadership benchmark.",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        },
+        {
+          "turn": 4,
+          "user": "Perfect, that's what we need.",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        }
+      ]
+    },
+    {
+      "trace": "C10.md",
+      "recall_exact": 0.0,
+      "recall_fuzzy": 0.0,
+      "turns": 3,
+      "expected": [
+        "SHL Verify Interactive G+",
+        "Graduate Scenarios"
+      ],
+      "got": [],
+      "transcript": [
+        {
+          "turn": 1,
+          "user": "We run a graduate management trainee scheme. We need a full battery \u2014 cognitive, personality, and situational judgement. All recent graduates.",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        },
+        {
+          "turn": 2,
+          "user": "But can you remove the OPQ32r and replace it with something shorter? Candidates complain it takes too long.",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        },
+        {
+          "turn": 3,
+          "user": "Drop the OPQ. Final list: Verify G+ and Graduate Scenarios.",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        }
+      ]
+    },
+    {
+      "trace": "C2.md",
+      "recall_exact": 0.0,
+      "recall_fuzzy": 0.0,
+      "turns": 3,
+      "expected": [
+        "Smart Interview Live Coding",
+        "Linux Programming (General)",
+        "Networking and Implementation (New)",
+        "SHL Verify Interactive G+",
+        "Occupational Personality Questionnaire OPQ32r"
+      ],
+      "got": [],
+      "transcript": [
+        {
+          "turn": 1,
+          "user": "I'm hiring a senior Rust engineer for high-performance networking infrastructure. What assessments should I use?",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        },
+        {
+          "turn": 2,
+          "user": "Yes, go ahead. Should I also add a cognitive test for this level?",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        },
+        {
+          "turn": 3,
+          "user": "That works. Thanks.",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        }
+      ]
+    },
+    {
+      "trace": "C3.md",
+      "recall_exact": 0.0,
+      "recall_fuzzy": 0.0,
+      "turns": 5,
+      "expected": [
+        "SVAR Spoken English (US) (New)",
+        "Contact Center Call Simulation (New)",
+        "Entry Level Customer Serv - Retail & Contact Center",
+        "Customer Service Phone Simulation"
+      ],
+      "got": [],
+      "transcript": [
+        {
+          "turn": 1,
+          "user": "We're screening 500 entry-level contact centre agents. Inbound calls, customer service focus. What should we use?",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        },
+        {
+          "turn": 2,
+          "user": "English.",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        },
+        {
+          "turn": 3,
+          "user": "US.",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        },
+        {
+          "turn": 4,
+          "user": "Is the Contact Center Call Simulation different from the Customer Service Phone Simulation?",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        },
+        {
+          "turn": 5,
+          "user": "Perfect \u2014 new simulation for volume, old solution for finalists. Confirmed.",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        }
+      ]
+    },
+    {
+      "trace": "C4.md",
+      "recall_exact": 0.0,
+      "recall_fuzzy": 0.0,
+      "turns": 3,
+      "expected": [
+        "SHL Verify Interactive \u2013 Numerical Reasoning",
+        "Financial Accounting (New)",
+        "Basic Statistics (New)",
+        "Graduate Scenarios",
+        "Occupational Personality Questionnaire OPQ32r"
+      ],
+      "got": [],
+      "transcript": [
+        {
+          "turn": 1,
+          "user": "Hiring graduate financial analysts \u2014 final-year students, no work experience. We need numerical reasoning and a finance knowledge test.",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        },
+        {
+          "turn": 2,
+          "user": "Good. Can you also add a situational judgement element \u2014 work-context decision making for graduates?",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        },
+        {
+          "turn": 3,
+          "user": "That covers it. Numerical + Graduate Scenarios as first filter, domain tests for shortlisted candidates.",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        }
+      ]
+    },
+    {
+      "trace": "C5.md",
+      "recall_exact": 0.0,
+      "recall_fuzzy": 0.0,
+      "turns": 3,
+      "expected": [
+        "Global Skills Assessment",
+        "Global Skills Development Report",
+        "Occupational Personality Questionnaire OPQ32r",
+        "OPQ MQ Sales Report",
+        "Sales Transformation 2.0 - Individual Contributor"
+      ],
+      "got": [],
+      "transcript": [
+        {
+          "turn": 1,
+          "user": "As part of our restructuring and annual talent audit, we need to re-skill our Sales organization. What solutions do you recommend?",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        },
+        {
+          "turn": 2,
+          "user": "What\u2019s the difference between OPQ and OPQ MQ Sales Report?",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        },
+        {
+          "turn": 3,
+          "user": "Clear. We\u2019ll use OPQ for everyone and add MQ only where we want motivators in the Sales Report; keeping the five solutions as our audit stack.",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        }
+      ]
+    },
+    {
+      "trace": "C6.md",
+      "recall_exact": 0.0,
+      "recall_fuzzy": 0.0,
+      "turns": 3,
+      "expected": [
+        "Manufac. & Indust. - Safety & Dependability 8.0",
+        "Workplace Health and Safety (New)"
+      ],
+      "got": [],
+      "transcript": [
+        {
+          "turn": 1,
+          "user": "We're hiring plant operators for a chemical facility. Safety is absolute top priority \u2014 reliability, procedure compliance, never cutting corners. What do you recommend?",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        },
+        {
+          "turn": 2,
+          "user": "What's the difference between the DSI and the Safety & Dependability 8.0?",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        },
+        {
+          "turn": 3,
+          "user": "We're industrial. The 8.0 bundle is the right fit. Confirmed.",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        }
+      ]
+    },
+    {
+      "trace": "C7.md",
+      "recall_exact": 0.0,
+      "recall_fuzzy": 0.0,
+      "turns": 4,
+      "expected": [
+        "HIPAA (Security)",
+        "Medical Terminology (New)",
+        "Microsoft Word 365 - Essentials (New)",
+        "Dependability and Safety Instrument (DSI)",
+        "Occupational Personality Questionnaire OPQ32r"
+      ],
+      "got": [],
+      "transcript": [
+        {
+          "turn": 1,
+          "user": "We're hiring bilingual healthcare admin staff in South Texas \u2014 they handle patient records and need to be assessed in Spanish. HIPAA compliance is critical. What assessments work?",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        },
+        {
+          "turn": 2,
+          "user": "They're functionally bilingual \u2014 English fluent for written work. Go with the hybrid.",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        },
+        {
+          "turn": 3,
+          "user": "Are we legally required under HIPAA to test all staff who touch patient records? And does this SHL test satisfy that requirement?",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        },
+        {
+          "turn": 4,
+          "user": "Understood. Keep the shortlist as-is.",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        }
+      ]
+    },
+    {
+      "trace": "C8.md",
+      "recall_exact": 0.0,
+      "recall_fuzzy": 0.0,
+      "turns": 3,
+      "expected": [
+        "Microsoft Excel 365 (New)",
+        "Microsoft Word 365 (New)",
+        "MS Excel (New)",
+        "MS Word (New)",
+        "Occupational Personality Questionnaire OPQ32r"
+      ],
+      "got": [],
+      "transcript": [
+        {
+          "turn": 1,
+          "user": "I need to quickly screen admin assistants for Excel and Word daily.",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        },
+        {
+          "turn": 2,
+          "user": "In that case, I am OK with adding a simulation - we want to capture the capabilties.",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        },
+        {
+          "turn": 3,
+          "user": "That's good.",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        }
+      ]
+    },
+    {
+      "trace": "C9.md",
+      "recall_exact": 0.0,
+      "recall_fuzzy": 0.0,
+      "turns": 7,
+      "expected": [
+        "Core Java (Advanced Level) (New)",
+        "Spring (New)",
+        "SQL (New)",
+        "Amazon Web Services (AWS) Development (New)",
+        "Docker (New)",
+        "SHL Verify Interactive G+",
+        "Occupational Personality Questionnaire OPQ32r"
+      ],
+      "got": [],
+      "transcript": [
+        {
+          "turn": 1,
+          "user": "Here's the JD for an engineer we need to fill. Can you recommend an assessment battery?\n\n\"Senior Full-Stack Engineer \u2014 5+ years across Core Java, Spring, REST API design, Angular, SQL/relational databases, AWS deployment, and Docker. Will own end-to-end microservice delivery, contribute to architectural decisions, and mentor mid-level engineers. Strong CI/CD and cloud-native experience required.\"",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        },
+        {
+          "turn": 2,
+          "user": "Backend-leaning. Day-one priorities are Core Java and Spring; SQL is constant. Angular is occasional \u2014 they'd review frontend PRs but not own features.",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        },
+        {
+          "turn": 3,
+          "user": "Senior IC. They lead design on their own services but don't manage other engineers directly.",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        },
+        {
+          "turn": 4,
+          "user": "Add AWS and Docker. Drop REST \u2014 the API design signal will already come through in Spring and the live interview.",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        },
+        {
+          "turn": 5,
+          "user": "On Java \u2014 they'd be working on existing services, not greenfield. Is the Advanced level the right pick?",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        },
+        {
+          "turn": 6,
+          "user": "Do we really need Verify G+ on top of all the technical tests? Feels redundant.",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        },
+        {
+          "turn": 7,
+          "user": "Keep Verify G+. Locking it in.",
+          "reply": "I'm having trouble processing that right now. Please try again in a moment.",
+          "recommendations": [],
+          "end_of_conversation": false
+        }
+      ]
+    }
+  ]
+}
