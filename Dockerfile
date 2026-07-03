@@ -18,7 +18,7 @@ COPY main.py .
 COPY src/ ./src/
 COPY data/catalog.json data/catalog.index data/catalog_ids.json data/catalog_index_meta.json ./data/
 
-ENV PYTHONPATH=/app
+ENV PYTHONPATH=/app:/app/src
 EXPOSE 8000
 
 CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port ${PORT:-8080}"]
