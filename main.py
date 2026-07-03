@@ -78,6 +78,15 @@ async def health() -> dict[str, str]:
     return {"status": "ok"}
 
 
+@app.get("/chat")
+async def chat_get_help() -> dict[str, str]:
+    return {
+        "message": "Use POST /chat with JSON body: {\"messages\": [{\"role\": \"user\", \"content\": \"...\"}]}",
+        "docs": "/docs",
+        "health": "/health",
+    }
+
+
 @app.post("/chat", response_model=ChatResponse)
 async def chat(request: Request) -> ChatResponse:
     try:
