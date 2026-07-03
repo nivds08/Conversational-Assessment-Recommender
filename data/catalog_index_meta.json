@@ -1,0 +1,7 @@
+{
+  "catalog_hash": "03e4a700ab8c5cf3ebbef4b2257286a5442cc168448742a3b6b47eba946aabeb",
+  "embedding_model": "gemini-embedding-001",
+  "dimension": 3072,
+  "index_type": "IndexFlatIP (cosine via L2-normalized inner product)",
+  "entry_count": 369
+}

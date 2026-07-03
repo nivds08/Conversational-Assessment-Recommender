@@ -8,6 +8,10 @@ from pathlib import Path
 
 from pydantic import BaseModel, Field, HttpUrl
 
+# Report products generated from prior assessment results (OPQ, Verify, etc.),
+# not standalone tests a candidate takes without a prerequisite assessment.
+INTERPRETIVE_REPORT_ENTITY_IDS = frozenset({"3845", "4284", "3746", "3484"})
+
 
 class CatalogEntry(BaseModel):
     entity_id: str
@@ -19,6 +23,7 @@ class CatalogEntry(BaseModel):
     duration: str
     remote: str
     adaptive: str
+    is_interpretive_report: bool = False
 
 
 def load_raw_catalog(path: Path | str) -> list[dict]:
@@ -72,8 +77,9 @@ def filter_individual_tests(entries: list[dict]) -> tuple[list[dict], list[dict]
 
 
 def to_catalog_entry(raw: dict) -> CatalogEntry:
+    entity_id = str(raw["entity_id"])
     return CatalogEntry(
-        entity_id=str(raw["entity_id"]),
+        entity_id=entity_id,
         name=raw["name"].strip(),
         url=raw["link"],
         test_type=list(raw.get("keys") or []),
@@ -82,6 +88,7 @@ def to_catalog_entry(raw: dict) -> CatalogEntry:
         duration=raw.get("duration") or "",
         remote=raw.get("remote") or "",
         adaptive=raw.get("adaptive") or "",
+        is_interpretive_report=entity_id in INTERPRETIVE_REPORT_ENTITY_IDS,
     )
 
 

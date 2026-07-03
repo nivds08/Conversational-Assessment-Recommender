@@ -1,5 +1,6 @@
 """Step 1: Download raw catalog and produce filtered catalog.json."""
 
+import json
 import sys
 from pathlib import Path
 
@@ -38,6 +39,12 @@ def main() -> None:
     print(f"\nOutput: {CATALOG_PATH}")
     print("\nExcluded entries:")
     for e in summary["excluded_entries"]:
+        print(f"  [{e['entity_id']}] {e['name']}")
+
+    catalog = json.loads(CATALOG_PATH.read_text(encoding="utf-8"))
+    flagged = [e for e in catalog if e.get("is_interpretive_report")]
+    print(f"\nInterpretive reports flagged: {len(flagged)}")
+    for e in flagged:
         print(f"  [{e['entity_id']}] {e['name']}")
 
 

@@ -25,7 +25,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3827",
@@ -41,7 +42,8 @@
     ],
     "duration": "30 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4094",
@@ -57,7 +59,8 @@
     ],
     "duration": "17 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4099",
@@ -73,7 +76,8 @@
     ],
     "duration": "5 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4018",
@@ -89,7 +93,8 @@
     ],
     "duration": "11 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4016",
@@ -105,7 +110,8 @@
     ],
     "duration": "9 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4165",
@@ -121,7 +127,8 @@
     ],
     "duration": "5 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4178",
@@ -139,7 +146,8 @@
     ],
     "duration": "9 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4187",
@@ -157,7 +165,8 @@
     ],
     "duration": "8 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4179",
@@ -175,7 +184,8 @@
     ],
     "duration": "13 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4188",
@@ -193,7 +203,8 @@
     ],
     "duration": "8 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4168",
@@ -209,7 +220,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4019",
@@ -225,7 +237,8 @@
     ],
     "duration": "17 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3778",
@@ -241,7 +254,8 @@
     ],
     "duration": "20 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4069",
@@ -258,7 +272,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4004",
@@ -275,7 +290,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4223",
@@ -290,7 +306,8 @@
     ],
     "duration": "7 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4159",
@@ -306,7 +323,8 @@
     ],
     "duration": "13 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4311",
@@ -321,7 +339,8 @@
     ],
     "duration": "16 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4028",
@@ -337,7 +356,8 @@
     ],
     "duration": "6 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4160",
@@ -353,7 +373,8 @@
     ],
     "duration": "7 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4153",
@@ -369,7 +390,8 @@
     ],
     "duration": "11 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4021",
@@ -385,7 +407,8 @@
     ],
     "duration": "9 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4030",
@@ -401,7 +424,8 @@
     ],
     "duration": "7 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4011",
@@ -417,7 +441,8 @@
     ],
     "duration": "9 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4073",
@@ -433,7 +458,8 @@
     ],
     "duration": "5 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4075",
@@ -449,7 +475,8 @@
     ],
     "duration": "5 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4022",
@@ -465,7 +492,8 @@
     ],
     "duration": "6 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4115",
@@ -481,7 +509,8 @@
     ],
     "duration": "6 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4023",
@@ -497,7 +526,8 @@
     ],
     "duration": "8 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4017",
@@ -513,7 +543,8 @@
     ],
     "duration": "13 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3786",
@@ -529,7 +560,8 @@
     ],
     "duration": "30 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4219",
@@ -553,7 +585,8 @@
     ],
     "duration": "Variable",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3980",
@@ -568,7 +601,8 @@
     ],
     "duration": "20 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3981",
@@ -584,7 +618,8 @@
     ],
     "duration": "30 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3984",
@@ -600,7 +635,8 @@
     ],
     "duration": "45 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3982",
@@ -616,7 +652,8 @@
     ],
     "duration": "60 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3983",
@@ -632,7 +669,8 @@
     ],
     "duration": "60 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4222",
@@ -651,7 +689,8 @@
     ],
     "duration": "30 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3985",
@@ -667,7 +706,8 @@
     ],
     "duration": "60 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4229",
@@ -686,7 +726,8 @@
     ],
     "duration": "60 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4026",
@@ -702,7 +743,8 @@
     ],
     "duration": "8 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4025",
@@ -719,7 +761,8 @@
     ],
     "duration": "13 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3988",
@@ -736,7 +779,8 @@
     ],
     "duration": "6 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4206",
@@ -752,7 +796,8 @@
     ],
     "duration": "30 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4149",
@@ -769,7 +814,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4161",
@@ -786,7 +832,8 @@
     ],
     "duration": "8 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4036",
@@ -803,7 +850,8 @@
     ],
     "duration": "5 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4037",
@@ -819,7 +867,8 @@
     ],
     "duration": "16 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "244",
@@ -838,7 +887,8 @@
     ],
     "duration": "24 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "536",
@@ -851,7 +901,8 @@
     "job_levels": [],
     "duration": "35 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4038",
@@ -867,7 +918,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4039",
@@ -883,7 +935,8 @@
     ],
     "duration": "9 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4122",
@@ -899,7 +952,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4077",
@@ -916,7 +970,8 @@
     ],
     "duration": "4 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4044",
@@ -933,7 +988,8 @@
     ],
     "duration": "12 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4012",
@@ -950,7 +1006,8 @@
     ],
     "duration": "13 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4024",
@@ -966,7 +1023,8 @@
     ],
     "duration": "9 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4150",
@@ -985,7 +1043,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4045",
@@ -1001,7 +1060,8 @@
     ],
     "duration": "8 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4046",
@@ -1017,7 +1077,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4104",
@@ -1033,7 +1094,8 @@
     ],
     "duration": "12 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4189",
@@ -1048,7 +1110,8 @@
     ],
     "duration": "15 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4296",
@@ -1061,7 +1124,8 @@
     "job_levels": [],
     "duration": "11 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4034",
@@ -1077,7 +1141,8 @@
     ],
     "duration": "13 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4032",
@@ -1093,7 +1158,8 @@
     ],
     "duration": "13 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3458",
@@ -1109,7 +1175,8 @@
     ],
     "duration": "5 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4052",
@@ -1125,7 +1192,8 @@
     ],
     "duration": "8 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4050",
@@ -1144,7 +1212,8 @@
     ],
     "duration": "7 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3933",
@@ -1158,7 +1227,8 @@
     "job_levels": [],
     "duration": "20 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4053",
@@ -1176,7 +1246,8 @@
     ],
     "duration": "9 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4186",
@@ -1191,7 +1262,8 @@
     ],
     "duration": "4 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "778",
@@ -1209,7 +1281,8 @@
     ],
     "duration": "5 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "779",
@@ -1227,7 +1300,8 @@
     ],
     "duration": "5 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "785",
@@ -1245,7 +1319,8 @@
     ],
     "duration": "3 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4013",
@@ -1261,7 +1336,8 @@
     ],
     "duration": "14 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "56",
@@ -1277,7 +1353,8 @@
     ],
     "duration": "25 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "731",
@@ -1292,7 +1369,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4162",
@@ -1309,7 +1387,8 @@
     ],
     "duration": "3 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4101",
@@ -1326,7 +1405,8 @@
     ],
     "duration": "8 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4003",
@@ -1345,7 +1425,8 @@
     ],
     "duration": "7 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4221",
@@ -1369,7 +1450,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4239",
@@ -1392,7 +1474,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4059",
@@ -1408,7 +1491,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4060",
@@ -1424,7 +1508,8 @@
     ],
     "duration": "11 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4062",
@@ -1440,7 +1525,8 @@
     ],
     "duration": "17 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "1102",
@@ -1453,7 +1539,8 @@
     "job_levels": [],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4148",
@@ -1470,7 +1557,8 @@
     ],
     "duration": "11 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4009",
@@ -1487,7 +1575,8 @@
     ],
     "duration": "13 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4001",
@@ -1504,7 +1593,8 @@
     ],
     "duration": "14 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4031",
@@ -1521,7 +1611,8 @@
     ],
     "duration": "8 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4002",
@@ -1538,7 +1629,8 @@
     ],
     "duration": "15 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4000",
@@ -1555,7 +1647,8 @@
     ],
     "duration": "18 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4139",
@@ -1572,7 +1665,8 @@
     ],
     "duration": "7 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4180",
@@ -1587,7 +1681,8 @@
     ],
     "duration": "0 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4063",
@@ -1603,7 +1698,8 @@
     ],
     "duration": "4 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3856",
@@ -1621,7 +1717,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4287",
@@ -1639,7 +1736,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4065",
@@ -1655,7 +1753,8 @@
     ],
     "duration": "9 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "743",
@@ -1672,7 +1771,8 @@
     ],
     "duration": "Untimed",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3849",
@@ -1689,7 +1789,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3899",
@@ -1706,7 +1807,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4127",
@@ -1722,7 +1824,8 @@
     ],
     "duration": "7 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "380",
@@ -1737,7 +1840,8 @@
     ],
     "duration": "3 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "381",
@@ -1752,7 +1856,8 @@
     ],
     "duration": "3 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3992",
@@ -1772,7 +1877,8 @@
     ],
     "duration": "9 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4083",
@@ -1791,7 +1897,8 @@
     ],
     "duration": "9 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4067",
@@ -1808,7 +1915,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "382",
@@ -1826,7 +1934,8 @@
     ],
     "duration": "8 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "383",
@@ -1844,7 +1953,8 @@
     ],
     "duration": "8 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4090",
@@ -1863,7 +1973,8 @@
     ],
     "duration": "7 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4071",
@@ -1880,7 +1991,8 @@
     ],
     "duration": "6 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4072",
@@ -1898,7 +2010,8 @@
     ],
     "duration": "7 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4113",
@@ -1915,7 +2028,8 @@
     ],
     "duration": "8 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4043",
@@ -1932,7 +2046,8 @@
     ],
     "duration": "8 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4048",
@@ -1949,7 +2064,8 @@
     ],
     "duration": "5 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4125",
@@ -1968,7 +2084,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4066",
@@ -1985,7 +2102,8 @@
     ],
     "duration": "8 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4078",
@@ -2001,7 +2119,8 @@
     ],
     "duration": "13 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4301",
@@ -2015,7 +2134,8 @@
     "job_levels": [],
     "duration": "16 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "741",
@@ -2033,7 +2153,8 @@
     ],
     "duration": "Untimed",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3900",
@@ -2051,7 +2172,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3901",
@@ -2069,7 +2191,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4074",
@@ -2085,7 +2208,8 @@
     ],
     "duration": "5 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "331",
@@ -2101,7 +2225,8 @@
     ],
     "duration": "15 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3845",
@@ -2115,7 +2240,8 @@
     "job_levels": [],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": true
   },
   {
     "entity_id": "4284",
@@ -2129,7 +2255,8 @@
     "job_levels": [],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": true
   },
   {
     "entity_id": "4285",
@@ -2142,7 +2269,8 @@
     "job_levels": [],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4076",
@@ -2159,7 +2287,8 @@
     ],
     "duration": "7 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4080",
@@ -2175,7 +2304,8 @@
     ],
     "duration": "12 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4081",
@@ -2191,7 +2321,8 @@
     ],
     "duration": "11 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3999",
@@ -2210,7 +2341,8 @@
     ],
     "duration": "8 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4169",
@@ -2226,7 +2358,8 @@
     ],
     "duration": "15 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4155",
@@ -2242,7 +2375,8 @@
     ],
     "duration": "13 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4005",
@@ -2259,7 +2393,8 @@
     ],
     "duration": "9 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4054",
@@ -2275,7 +2410,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4055",
@@ -2291,7 +2427,8 @@
     ],
     "duration": "11 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4007",
@@ -2308,7 +2445,8 @@
     ],
     "duration": "12 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "249",
@@ -2327,7 +2465,8 @@
     ],
     "duration": "15 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "333",
@@ -2343,7 +2482,8 @@
     ],
     "duration": "15 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4102",
@@ -2359,7 +2499,8 @@
     ],
     "duration": "7 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4040",
@@ -2377,7 +2518,8 @@
     ],
     "duration": "8 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "88",
@@ -2394,7 +2536,8 @@
     ],
     "duration": "30 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4084",
@@ -2410,7 +2553,8 @@
     ],
     "duration": "18 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4158",
@@ -2426,7 +2570,8 @@
     ],
     "duration": "5 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4056",
@@ -2442,7 +2587,8 @@
     ],
     "duration": "17 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3809",
@@ -2458,7 +2604,8 @@
     ],
     "duration": "30 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4033",
@@ -2474,7 +2621,8 @@
     ],
     "duration": "8 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3989",
@@ -2490,7 +2638,8 @@
     ],
     "duration": "9 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4086",
@@ -2506,7 +2655,8 @@
     ],
     "duration": "6 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4085",
@@ -2522,7 +2672,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4087",
@@ -2538,7 +2689,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4152",
@@ -2554,7 +2706,8 @@
     ],
     "duration": "6 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3990",
@@ -2570,7 +2723,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4299",
@@ -2588,7 +2742,8 @@
     ],
     "duration": "15 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "205",
@@ -2604,7 +2759,8 @@
     ],
     "duration": "25 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4170",
@@ -2620,7 +2776,8 @@
     ],
     "duration": "6 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "742",
@@ -2638,7 +2795,8 @@
     ],
     "duration": "Untimed",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3903",
@@ -2656,7 +2814,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3902",
@@ -2674,7 +2833,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3904",
@@ -2692,7 +2852,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4157",
@@ -2708,7 +2869,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4291",
@@ -2728,7 +2890,8 @@
     ],
     "duration": "49 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4293",
@@ -2747,7 +2910,8 @@
     ],
     "duration": "16 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4295",
@@ -2766,7 +2930,8 @@
     ],
     "duration": "16 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4292",
@@ -2786,7 +2951,8 @@
     ],
     "duration": "31 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4294",
@@ -2806,7 +2972,8 @@
     ],
     "duration": "34 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4008",
@@ -2825,7 +2992,8 @@
     ],
     "duration": "9 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4089",
@@ -2841,7 +3009,8 @@
     ],
     "duration": "7 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4006",
@@ -2858,7 +3027,8 @@
     ],
     "duration": "7 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4176",
@@ -2875,7 +3045,8 @@
     ],
     "duration": "19 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4058",
@@ -2892,7 +3063,8 @@
     ],
     "duration": "3 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4119",
@@ -2911,7 +3083,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3951",
@@ -2924,7 +3097,8 @@
     "job_levels": [],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3950",
@@ -2937,7 +3111,8 @@
     "job_levels": [],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3949",
@@ -2950,7 +3125,8 @@
     "job_levels": [],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3948",
@@ -2963,7 +3139,8 @@
     "job_levels": [],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4027",
@@ -2979,7 +3156,8 @@
     ],
     "duration": "12 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4091",
@@ -2995,7 +3173,8 @@
     ],
     "duration": "7 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4092",
@@ -3011,7 +3190,8 @@
     ],
     "duration": "9 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4208",
@@ -3027,7 +3207,8 @@
     ],
     "duration": "30 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4207",
@@ -3043,7 +3224,8 @@
     ],
     "duration": "35 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3785",
@@ -3059,7 +3241,8 @@
     ],
     "duration": "25 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4212",
@@ -3075,7 +3258,8 @@
     ],
     "duration": "25 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3789",
@@ -3091,7 +3275,8 @@
     ],
     "duration": "35 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3807",
@@ -3107,7 +3292,8 @@
     ],
     "duration": "35 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4211",
@@ -3123,7 +3309,8 @@
     ],
     "duration": "25 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4210",
@@ -3139,7 +3326,8 @@
     ],
     "duration": "35 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4047",
@@ -3158,7 +3346,8 @@
     ],
     "duration": "12 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4093",
@@ -3177,7 +3366,8 @@
     ],
     "duration": "16 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4174",
@@ -3193,7 +3383,8 @@
     ],
     "duration": "9 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4096",
@@ -3210,7 +3401,8 @@
     ],
     "duration": "6 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4010",
@@ -3226,7 +3418,8 @@
     ],
     "duration": "7 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "724",
@@ -3250,7 +3443,8 @@
     ],
     "duration": "25 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "1308",
@@ -3274,7 +3468,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "1306",
@@ -3298,7 +3493,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "1309",
@@ -3322,7 +3518,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "1048",
@@ -3346,7 +3543,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4015",
@@ -3366,7 +3564,8 @@
     ],
     "duration": "7 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3993",
@@ -3386,7 +3585,8 @@
     ],
     "duration": "6 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3995",
@@ -3403,7 +3603,8 @@
     ],
     "duration": "7 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4193",
@@ -3423,7 +3624,8 @@
     ],
     "duration": "5 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4097",
@@ -3443,7 +3645,8 @@
     ],
     "duration": "4 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3994",
@@ -3463,7 +3666,8 @@
     ],
     "duration": "4 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4098",
@@ -3479,7 +3683,8 @@
     ],
     "duration": "17 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "615",
@@ -3502,7 +3707,8 @@
     ],
     "duration": "20 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4100",
@@ -3518,7 +3724,8 @@
     ],
     "duration": "7 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3997",
@@ -3534,7 +3741,8 @@
     ],
     "duration": "9 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4041",
@@ -3553,7 +3761,8 @@
     ],
     "duration": "11 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "720",
@@ -3576,7 +3785,8 @@
     ],
     "duration": "25 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4116",
@@ -3594,7 +3804,8 @@
     ],
     "duration": "7 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "727",
@@ -3617,7 +3828,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4298",
@@ -3630,7 +3842,8 @@
     "job_levels": [],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "748",
@@ -3653,7 +3866,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "749",
@@ -3672,7 +3886,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "750",
@@ -3693,7 +3908,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4300",
@@ -3717,7 +3933,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "752",
@@ -3740,7 +3957,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "754",
@@ -3763,7 +3981,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "753",
@@ -3786,7 +4005,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4307",
@@ -3810,7 +4030,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "1050",
@@ -3833,7 +4054,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "1060",
@@ -3856,7 +4078,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "1059",
@@ -3879,7 +4102,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "1058",
@@ -3902,7 +4126,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "1061",
@@ -3925,7 +4150,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "756",
@@ -3948,7 +4174,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "757",
@@ -3971,7 +4198,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4286",
@@ -3994,7 +4222,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "758",
@@ -4017,7 +4246,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4289",
@@ -4040,7 +4270,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "1067",
@@ -4063,7 +4294,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "759",
@@ -4087,7 +4319,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4106",
@@ -4103,7 +4336,8 @@
     ],
     "duration": "12 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4105",
@@ -4119,7 +4353,8 @@
     ],
     "duration": "12 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4145",
@@ -4135,7 +4370,8 @@
     ],
     "duration": "11 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4156",
@@ -4151,7 +4387,8 @@
     ],
     "duration": "7 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4154",
@@ -4168,7 +4405,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4107",
@@ -4185,7 +4423,8 @@
     ],
     "duration": "7 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3998",
@@ -4202,7 +4441,8 @@
     ],
     "duration": "5 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4108",
@@ -4218,7 +4458,8 @@
     ],
     "duration": "17 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4109",
@@ -4234,7 +4475,8 @@
     ],
     "duration": "9 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4070",
@@ -4251,7 +4493,8 @@
     ],
     "duration": "7 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4110",
@@ -4268,7 +4511,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4088",
@@ -4285,7 +4529,8 @@
     ],
     "duration": "12 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4114",
@@ -4302,7 +4547,8 @@
     ],
     "duration": "17 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4061",
@@ -4319,7 +4565,8 @@
     ],
     "duration": "7 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4111",
@@ -4336,7 +4583,8 @@
     ],
     "duration": "12 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4112",
@@ -4353,7 +4601,8 @@
     ],
     "duration": "12 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4103",
@@ -4369,7 +4618,8 @@
     ],
     "duration": "8 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3746",
@@ -4388,7 +4638,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": true
   },
   {
     "entity_id": "3484",
@@ -4406,7 +4657,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": true
   },
   {
     "entity_id": "4042",
@@ -4423,7 +4675,8 @@
     ],
     "duration": "8 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4118",
@@ -4440,7 +4693,8 @@
     ],
     "duration": "15 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4117",
@@ -4457,7 +4711,8 @@
     ],
     "duration": "12 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4095",
@@ -4473,7 +4728,8 @@
     ],
     "duration": "4 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4121",
@@ -4490,7 +4746,8 @@
     ],
     "duration": "13 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4120",
@@ -4507,7 +4764,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "219",
@@ -4523,7 +4781,8 @@
     ],
     "duration": "25 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3769",
@@ -4539,7 +4798,8 @@
     ],
     "duration": "30 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "393",
@@ -4555,7 +4815,8 @@
     ],
     "duration": "6 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4123",
@@ -4571,7 +4832,8 @@
     ],
     "duration": "11 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4124",
@@ -4587,7 +4849,8 @@
     ],
     "duration": "13 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4177",
@@ -4603,7 +4866,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3472",
@@ -4622,7 +4886,8 @@
     ],
     "duration": "35 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "543",
@@ -4641,7 +4906,8 @@
     ],
     "duration": "26 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3942",
@@ -4660,7 +4926,8 @@
     ],
     "duration": "35 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4204",
@@ -4684,7 +4951,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4202",
@@ -4708,7 +4976,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4203",
@@ -4732,7 +5001,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4126",
@@ -4748,7 +5018,8 @@
     ],
     "duration": "12 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "697",
@@ -4766,7 +5037,8 @@
     ],
     "duration": "30 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "395",
@@ -4782,7 +5054,8 @@
     ],
     "duration": "5 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4129",
@@ -4798,7 +5071,8 @@
     ],
     "duration": "11 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4128",
@@ -4814,7 +5088,8 @@
     ],
     "duration": "11 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3932",
@@ -4830,7 +5105,8 @@
     ],
     "duration": "20 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "726",
@@ -4852,7 +5128,8 @@
     ],
     "duration": "Untimed",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "725",
@@ -4873,7 +5150,8 @@
     ],
     "duration": "Untimed",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4230",
@@ -4894,7 +5172,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4283",
@@ -4915,7 +5194,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4233",
@@ -4934,7 +5214,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4288",
@@ -4953,7 +5234,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4130",
@@ -4969,7 +5251,8 @@
     ],
     "duration": "15 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4131",
@@ -4985,7 +5268,8 @@
     ],
     "duration": "12 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4132",
@@ -5001,7 +5285,8 @@
     ],
     "duration": "9 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4133",
@@ -5017,7 +5302,8 @@
     ],
     "duration": "9 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4136",
@@ -5033,7 +5319,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4134",
@@ -5049,7 +5336,8 @@
     ],
     "duration": "9 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4135",
@@ -5065,7 +5353,8 @@
     ],
     "duration": "TBC",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4082",
@@ -5081,7 +5370,8 @@
     ],
     "duration": "20 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4137",
@@ -5097,7 +5387,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4064",
@@ -5113,7 +5404,8 @@
     ],
     "duration": "8 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4171",
@@ -5130,7 +5422,8 @@
     ],
     "duration": "12 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4138",
@@ -5146,7 +5439,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4140",
@@ -5162,7 +5456,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3968",
@@ -5181,7 +5476,8 @@
     ],
     "duration": "20 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3947",
@@ -5200,7 +5496,8 @@
     ],
     "duration": "20 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3946",
@@ -5219,7 +5516,8 @@
     ],
     "duration": "20 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3971",
@@ -5237,7 +5535,8 @@
     ],
     "duration": "36 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3972",
@@ -5252,7 +5551,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4141",
@@ -5268,7 +5568,8 @@
     ],
     "duration": "8 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4209",
@@ -5290,7 +5591,8 @@
     ],
     "duration": "Variable",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4218",
@@ -5309,7 +5611,8 @@
     ],
     "duration": "Variable",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4205",
@@ -5331,7 +5634,8 @@
     ],
     "duration": "Variable",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4014",
@@ -5351,7 +5655,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "116",
@@ -5367,7 +5672,8 @@
     ],
     "duration": "30 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4142",
@@ -5383,7 +5689,8 @@
     ],
     "duration": "TBC",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4051",
@@ -5398,7 +5705,8 @@
     ],
     "duration": "0 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "40",
@@ -5414,7 +5722,8 @@
     ],
     "duration": "6 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4143",
@@ -5430,7 +5739,8 @@
     ],
     "duration": "9 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4144",
@@ -5446,7 +5756,8 @@
     ],
     "duration": "9 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4035",
@@ -5462,7 +5773,8 @@
     ],
     "duration": "11 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4282",
@@ -5475,7 +5787,8 @@
     "job_levels": [],
     "duration": "15 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4146",
@@ -5491,7 +5804,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4147",
@@ -5507,7 +5821,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3996",
@@ -5523,7 +5838,8 @@
     ],
     "duration": "11 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4151",
@@ -5539,7 +5855,8 @@
     ],
     "duration": "5 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4216",
@@ -5554,7 +5871,8 @@
     ],
     "duration": "-",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3986",
@@ -5569,7 +5887,8 @@
     ],
     "duration": "-",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4217",
@@ -5584,7 +5903,8 @@
     ],
     "duration": "-",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3987",
@@ -5599,7 +5919,8 @@
     ],
     "duration": "-",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4197",
@@ -5614,7 +5935,8 @@
     ],
     "duration": "-",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4198",
@@ -5629,7 +5951,8 @@
     ],
     "duration": "-",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4199",
@@ -5644,7 +5967,8 @@
     ],
     "duration": "-",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4200",
@@ -5659,7 +5983,8 @@
     ],
     "duration": "-",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4049",
@@ -5675,7 +6000,8 @@
     ],
     "duration": "4 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4079",
@@ -5691,7 +6017,8 @@
     ],
     "duration": "8 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4020",
@@ -5710,7 +6037,8 @@
     ],
     "duration": "7 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4167",
@@ -5726,7 +6054,8 @@
     ],
     "duration": "9 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "251",
@@ -5745,7 +6074,8 @@
     ],
     "duration": "15 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "336",
@@ -5761,7 +6091,8 @@
     ],
     "duration": "15 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4201",
@@ -5776,7 +6107,8 @@
     ],
     "duration": "2 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4175",
@@ -5792,7 +6124,8 @@
     ],
     "duration": "8 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "735",
@@ -5814,7 +6147,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "734",
@@ -5836,7 +6170,8 @@
     ],
     "duration": "Untimed",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "733",
@@ -5858,7 +6193,8 @@
     ],
     "duration": "Untimed",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4172",
@@ -5874,7 +6210,8 @@
     ],
     "duration": "9 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4173",
@@ -5890,7 +6227,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3733",
@@ -5914,7 +6252,8 @@
     ],
     "duration": "20 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3941",
@@ -5929,7 +6268,8 @@
     ],
     "duration": "8 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3908",
@@ -5953,7 +6293,8 @@
     ],
     "duration": "36 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3734",
@@ -5968,7 +6309,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3836",
@@ -5992,7 +6334,8 @@
     ],
     "duration": "24 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3745",
@@ -6016,7 +6359,8 @@
     ],
     "duration": "20 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3768",
@@ -6031,7 +6375,8 @@
     ],
     "duration": "5 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3906",
@@ -6055,7 +6400,8 @@
     ],
     "duration": "15 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3940",
@@ -6070,7 +6416,8 @@
     ],
     "duration": "10 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3945",
@@ -6083,7 +6430,8 @@
     "job_levels": [],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3970",
@@ -6096,7 +6444,8 @@
     "job_levels": [],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3969",
@@ -6109,7 +6458,8 @@
     "job_levels": [],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3976",
@@ -6122,7 +6472,8 @@
     "job_levels": [],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3974",
@@ -6140,7 +6491,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4290",
@@ -6158,7 +6510,8 @@
     ],
     "duration": "18 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4215",
@@ -6182,7 +6535,8 @@
     ],
     "duration": "N/A",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4163",
@@ -6198,7 +6552,8 @@
     ],
     "duration": "7 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "399",
@@ -6213,7 +6568,8 @@
     ],
     "duration": "5 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "400",
@@ -6228,7 +6584,8 @@
     ],
     "duration": "5 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4164",
@@ -6244,7 +6601,8 @@
     ],
     "duration": "9 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3459",
@@ -6259,7 +6617,8 @@
     ],
     "duration": "5 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "3991",
@@ -6277,7 +6636,8 @@
     ],
     "duration": "12 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4068",
@@ -6297,7 +6657,8 @@
     ],
     "duration": "9 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4183",
@@ -6317,7 +6678,8 @@
     ],
     "duration": "15 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4184",
@@ -6337,7 +6699,8 @@
     ],
     "duration": "15 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4185",
@@ -6358,7 +6721,8 @@
     ],
     "duration": "15 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "17",
@@ -6376,7 +6740,8 @@
     ],
     "duration": "30 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "18",
@@ -6394,7 +6759,8 @@
     ],
     "duration": "22 minutes",
     "remote": "yes",
-    "adaptive": "yes"
+    "adaptive": "yes",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4166",
@@ -6410,7 +6776,8 @@
     ],
     "duration": "9 minutes",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "4297",
@@ -6431,7 +6798,8 @@
     ],
     "duration": "",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   },
   {
     "entity_id": "744",
@@ -6452,6 +6820,7 @@
     ],
     "duration": "Untimed",
     "remote": "yes",
-    "adaptive": "no"
+    "adaptive": "no",
+    "is_interpretive_report": false
   }
 ]
