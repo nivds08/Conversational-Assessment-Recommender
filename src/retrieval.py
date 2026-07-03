@@ -1,18 +1,14 @@
-"""Embedding-based catalog retrieval with Gemini + FAISS."""
+"""Embedding-based catalog retrieval with local sentence-transformers + FAISS."""
 
 from __future__ import annotations
 
 import hashlib
 import json
-import re
-import time
 from pathlib import Path
 
 import faiss
 import numpy as np
-from dotenv import load_dotenv
-from google import genai
-from google.genai import types
+from sentence_transformers import SentenceTransformer
 
 from embedding_text import build_embedding_text
 
@@ -22,16 +18,13 @@ INDEX_PATH = ROOT / "data" / "catalog.index"
 IDS_PATH = ROOT / "data" / "catalog_ids.json"
 META_PATH = ROOT / "data" / "catalog_index_meta.json"
 
-EMBEDDING_MODEL = "gemini-embedding-001"
+EMBEDDING_MODEL = "all-MiniLM-L6-v2"
 EMBED_BATCH_SIZE = 20
-# Free tier: 100 embed requests/min (each text in a batch counts). ~20 texts → wait ≥12s.
-INTER_BATCH_SLEEP_SEC = 15.0
-MAX_RETRIES = 8
-INITIAL_BACKOFF_SEC = 5.0
 
 _index: faiss.Index | None = None
 _catalog_by_id: dict[str, dict] | None = None
 _id_order: list[str] | None = None
+_embed_model: SentenceTransformer | None = None
 
 
 def _catalog_hash(path: Path = CATALOG_PATH) -> str:
@@ -43,77 +36,33 @@ def load_catalog(path: Path = CATALOG_PATH) -> list[dict]:
         return json.load(f)
 
 
-def _get_client() -> genai.Client:
-    """Load .env then delegate auth entirely to the google-genai SDK."""
-    load_dotenv(ROOT / ".env")
-    return genai.Client()
-
-
-def _retry_wait_seconds(exc: Exception, attempt: int) -> float:
-    """Use API-suggested retry delay when present, else exponential backoff."""
-    match = re.search(r"retry in (\d+(?:\.\d+)?)s", str(exc), re.IGNORECASE)
-    if match:
-        return float(match.group(1)) + 2.0
-    return INITIAL_BACKOFF_SEC * (2**attempt)
-
-
-def _is_rate_limit_error(exc: Exception) -> bool:
-    msg = str(exc).lower()
-    return any(
-        token in msg
-        for token in ("429", "rate limit", "quota", "resource exhausted", "too many requests")
-    )
+def _get_embed_model() -> SentenceTransformer:
+    global _embed_model
+    if _embed_model is None:
+        _embed_model = SentenceTransformer(EMBEDDING_MODEL)
+    return _embed_model
 
 
 def embed_texts(
     texts: list[str],
     *,
     task_type: str = "RETRIEVAL_DOCUMENT",
-    client: genai.Client | None = None,
 ) -> np.ndarray:
-    """Embed a list of texts with retry/backoff. Never silently drops entries."""
+    """Embed a list of texts locally using sentence-transformers."""
     if not texts:
         return np.zeros((0, 0), dtype=np.float32)
 
-    client = client or _get_client()
-    all_vectors: list[list[float]] = []
-
-    for start in range(0, len(texts), EMBED_BATCH_SIZE):
-        batch = texts[start : start + EMBED_BATCH_SIZE]
-        batch_vectors: list[list[float]] | None = None
-
-        for attempt in range(MAX_RETRIES):
-            try:
-                response = client.models.embed_content(
-                    model=EMBEDDING_MODEL,
-                    contents=batch,
-                    config=types.EmbedContentConfig(task_type=task_type),
-                )
-                batch_vectors = [emb.values for emb in response.embeddings]
-                if len(batch_vectors) != len(batch):
-                    raise RuntimeError(
-                        f"Embedding batch size mismatch: sent {len(batch)}, "
-                        f"got {len(batch_vectors)}"
-                    )
-                break
-            except Exception as exc:
-                if _is_rate_limit_error(exc) and attempt < MAX_RETRIES - 1:
-                    wait = _retry_wait_seconds(exc, attempt)
-                    time.sleep(wait)
-                    continue
-                raise RuntimeError(
-                    f"Failed to embed batch starting at index {start} "
-                    f"after {attempt + 1} attempt(s): {exc}"
-                ) from exc
-
-        assert batch_vectors is not None
-        all_vectors.extend(batch_vectors)
-
-        # Free-tier quota: each embedded text counts toward 100/min limit
-        if start + EMBED_BATCH_SIZE < len(texts):
-            time.sleep(INTER_BATCH_SLEEP_SEC)
-
-    return np.array(all_vectors, dtype=np.float32)
+    # task_type is unused for local model but kept for API compatibility.
+    _ = task_type
+    model = _get_embed_model()
+    vectors = model.encode(
+        texts,
+        batch_size=EMBED_BATCH_SIZE,
+        show_progress_bar=False,
+        normalize_embeddings=True,
+        convert_to_numpy=True,
+    )
+    return np.asarray(vectors, dtype=np.float32)
 
 
 def _write_meta(catalog_hash: str, dimension: int) -> None:
@@ -141,14 +90,17 @@ def build_index(*, force: bool = False) -> None:
         and META_PATH.exists()
     ):
         meta = json.loads(META_PATH.read_text(encoding="utf-8"))
-        if meta.get("catalog_hash") == catalog_hash:
+        if (
+            meta.get("catalog_hash") == catalog_hash
+            and meta.get("embedding_model") == EMBEDDING_MODEL
+        ):
             return
 
     catalog = load_catalog()
     texts = [build_embedding_text(entry) for entry in catalog]
     vectors = embed_texts(texts, task_type="RETRIEVAL_DOCUMENT")
 
-    faiss.normalize_L2(vectors)
+    # vectors are already normalized by sentence-transformers encode().
     dim = vectors.shape[1]
     index = faiss.IndexFlatIP(dim)
     index.add(vectors)
