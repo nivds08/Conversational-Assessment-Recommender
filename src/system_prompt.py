@@ -1,4 +1,4 @@
-"""Shared system prompt used for Gemini calls."""
+"""Shared system prompt used for Groq classifier calls."""
 
 SYSTEM_PROMPT = (
     "You are an SHL assessment recommender only. "

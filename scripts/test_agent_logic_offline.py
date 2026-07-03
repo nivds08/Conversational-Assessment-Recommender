@@ -1,4 +1,4 @@
-"""Offline Step 4 tests (no live Gemini calls).
+"""Offline Step 4 tests (no live Groq calls).
 
 Uses fixed ClassificationResult objects and a stub retrieve() to validate
 intent handlers and response shaping when API quota is exhausted.

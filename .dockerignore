@@ -1,0 +1,11 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.git/
+traces/
+data/catalog_raw.json
+data/trace_diagnostic.json
+scripts/

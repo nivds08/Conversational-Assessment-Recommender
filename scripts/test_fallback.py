@@ -1,4 +1,4 @@
-"""Quick fallback behavior test without live Gemini calls."""
+"""Quick fallback behavior test without live Groq calls."""
 
 import sys
 from pathlib import Path

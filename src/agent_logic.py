@@ -8,7 +8,7 @@ from typing import Literal
 
 from pydantic import BaseModel, Field
 
-from intent_classifier import ClassificationResult, classify_turn
+from intent_classifier import ClassificationResult, _is_ambiguous_specialization, classify_turn
 from retrieval import load_catalog, retrieve
 
 
@@ -55,6 +55,94 @@ def _constraints_to_query(classification: ClassificationResult) -> str:
     elif c.adaptive_required is False:
         parts.append("Non-adaptive assessment required")
     return ". ".join(parts) if parts else "General SHL assessment recommendation"
+
+
+# Preserve skill/tool tokens as the user literally wrote them (not only normalized constraints).
+_LITERAL_KEYWORD_RE = re.compile(
+    r"\b(?:"
+    r"MS\s+Excel|MS\s+Word|Microsoft\s+Excel(?:\s+365)?|Microsoft\s+Word(?:\s+365)?|"
+    r"Excel|Word|PowerPoint|Outlook|Access|"
+    r"Java(?:\s+\d+)?|Spring|SQL|Python|Rust|JavaScript|TypeScript|Angular|React|Node\.js|"
+    r"AWS|Docker|Kubernetes|DevOps|HIPAA|REST|API|"
+    r"OPQ|Verify|SVAR|Linux|networking|"
+    r"contact\s+cent(?:er|re)|cashier|sales|"
+    r")\b",
+    re.IGNORECASE,
+)
+
+
+def _extract_literal_keywords(messages: list[dict], classification: ClassificationResult) -> str:
+    """Pull raw skill/tool nouns from the latest user message for embedding retrieval."""
+    latest = ""
+    for m in reversed(messages):
+        if m.get("role") == "user":
+            latest = m.get("content", "")
+            break
+    if not latest:
+        return ""
+
+    found: list[str] = []
+    seen: set[str] = set()
+
+    def add(term: str) -> None:
+        key = re.sub(r"\s+", " ", term.lower().strip())
+        if key and key not in seen:
+            seen.add(key)
+            found.append(term.strip())
+
+    low = latest.lower()
+    for skill in classification.constraints.skills:
+        if skill.lower() in low:
+            add(skill)
+
+    for match in _LITERAL_KEYWORD_RE.finditer(latest):
+        add(match.group(0))
+
+    for match in re.finditer(r'"([^"]{3,120})"', latest):
+        snippet = match.group(1)
+        for part in re.split(r"[,;/]| and ", snippet):
+            part = part.strip()
+            if len(part) >= 3:
+                add(part)
+
+    return " ".join(found)
+
+
+def _build_retrieval_query(classification: ClassificationResult, messages: list[dict]) -> str:
+    base = _constraints_to_query(classification)
+    literal = _extract_literal_keywords(messages, classification)
+    if literal:
+        return f"{base}. Literal keywords: {literal}"
+    return base
+
+
+def _has_prior_shortlist_in_conversation(messages: list[dict]) -> bool:
+    for m in messages:
+        if m.get("role") != "assistant":
+            continue
+        text = (m.get("content") or "").lower()
+        if any(
+            marker in text
+            for marker in (
+                "i found",
+                "matching shl assessments",
+                "updated shortlist",
+                "shortlist",
+            )
+        ):
+            return True
+    return False
+
+
+def _recover_prior_shortlist(
+    classification: ClassificationResult, messages: list[dict]
+) -> list[Recommendation]:
+    """Rebuild the established shortlist from cumulative constraints (deterministic)."""
+    query = _build_retrieval_query(classification, messages)
+    raw = retrieve(query, k=10)
+    raw = _suppress_meta_products(raw, query, classification)
+    filtered = _hard_filter_results(raw, classification)
+    return _to_recommendations(filtered)
 
 
 def _normalize_bool_flag(value: str) -> bool | None:
@@ -164,7 +252,7 @@ def _missing_constraint_bucket(classification: ClassificationResult) -> Literal[
         return "role"
     if not c.seniority and not c.skills:
         return "seniority_skills"
-    if not c.test_types:
+    if not c.test_types and not c.skills:
         return "test_type"
     if (
         c.max_duration_minutes is None
@@ -176,22 +264,36 @@ def _missing_constraint_bucket(classification: ClassificationResult) -> Literal[
 
 
 def handle_clarify_needed(classification: ClassificationResult, messages: list[dict]) -> AgentResponse:
-    bucket = _missing_constraint_bucket(classification)
-    if bucket == "role":
-        question = "What role are you hiring for?"
-    elif bucket == "seniority_skills":
-        question = "What seniority level and key skills should this assessment focus on?"
-    elif bucket == "test_type":
-        question = "Do you want a specific test type, like knowledge, personality, or simulations?"
-    elif bucket == "duration_delivery":
-        question = "Do you have any duration limit or remote/adaptive preference?"
+    user_text = " ".join(
+        m.get("content", "") for m in messages if m.get("role") == "user"
+    ).lower()
+    if ("bilingual" in user_text or "spanish" in user_text) and classification.constraints.language is None:
+        question = (
+            "Should knowledge tests run in English with personality measures in Spanish, "
+            "or do you need a different language split for this bilingual pool?"
+        )
+    elif _is_ambiguous_specialization(user_text):
+        question = (
+            "Your description spans multiple technology areas. Is this role backend-leaning, "
+            "frontend-heavy, or a balanced full-stack role? That determines which skill tests to prioritize."
+        )
     else:
-        question = "Do you need the assessment available in a specific language?"
+        bucket = _missing_constraint_bucket(classification)
+        if bucket == "role":
+            question = "What role are you hiring for?"
+        elif bucket == "seniority_skills":
+            question = "What seniority level and key skills should this assessment focus on?"
+        elif bucket == "test_type":
+            question = "Do you want a specific test type, like knowledge, personality, or simulations?"
+        elif bucket == "duration_delivery":
+            question = "Do you have any duration limit or remote/adaptive preference?"
+        else:
+            question = "Do you need the assessment available in a specific language?"
     return AgentResponse(reply=question, recommendations=[], end_of_conversation=False)
 
 
 def handle_recommend(classification: ClassificationResult, messages: list[dict]) -> AgentResponse:
-    query = _constraints_to_query(classification)
+    query = _build_retrieval_query(classification, messages)
     raw = retrieve(query, k=10)
     raw = _suppress_meta_products(raw, query, classification)
     filtered = _hard_filter_results(raw, classification)
@@ -202,7 +304,7 @@ def handle_recommend(classification: ClassificationResult, messages: list[dict])
 
 def handle_refine(classification: ClassificationResult, messages: list[dict]) -> AgentResponse:
     # classify_turn uses full message history, so constraints are cumulative across turns.
-    query = _constraints_to_query(classification)
+    query = _build_retrieval_query(classification, messages)
     raw = retrieve(query, k=10)
     raw = _suppress_meta_products(raw, query, classification)
     filtered = _hard_filter_results(raw, classification)
@@ -249,6 +351,10 @@ def handle_compare(classification: ClassificationResult, messages: list[dict]) -
             end_of_conversation=False,
         )
 
+    prior_shortlist: list[Recommendation] = []
+    if _has_prior_shortlist_in_conversation(messages):
+        prior_shortlist = _recover_prior_shortlist(classification, messages)
+
     matches: list[tuple[str, dict | None, float]] = []
     for n in names:
         match, score = _find_catalog_match(n, catalog, threshold=0.72)
@@ -262,7 +368,7 @@ def handle_compare(classification: ClassificationResult, messages: list[dict]) -
                 + ", ".join(missing)
                 + ". Please check the names and try again."
             ),
-            recommendations=[],
+            recommendations=prior_shortlist,
             end_of_conversation=False,
         )
 
@@ -276,7 +382,7 @@ def handle_compare(classification: ClassificationResult, messages: list[dict]) -
             f"remote {a.get('remote')}; adaptive {a.get('adaptive')}; "
             f"job levels {', '.join(a.get('job_levels') or ['not specified'])}."
         )
-        return AgentResponse(reply=reply, recommendations=[], end_of_conversation=False)
+        return AgentResponse(reply=reply, recommendations=prior_shortlist, end_of_conversation=False)
     reply = (
         f"{a['name']} vs {b['name']}: "
         f"types [{', '.join(a.get('test_type') or [])}] vs [{', '.join(b.get('test_type') or [])}], "
@@ -286,7 +392,7 @@ def handle_compare(classification: ClassificationResult, messages: list[dict]) -
         f"job levels [{', '.join(a.get('job_levels') or ['not specified'])}] vs "
         f"[{', '.join(b.get('job_levels') or ['not specified'])}]."
     )
-    return AgentResponse(reply=reply, recommendations=[], end_of_conversation=False)
+    return AgentResponse(reply=reply, recommendations=prior_shortlist, end_of_conversation=False)
 
 
 def handle_refuse(classification: ClassificationResult, messages: list[dict]) -> AgentResponse:
@@ -310,7 +416,12 @@ def generate_agent_response(messages: list[dict]) -> AgentResponse:
         elif classification.intent == "REFINE":
             response = handle_refine(classification, messages)
         elif classification.intent == "COMPARE":
-            return handle_compare(classification, messages)
+            response = handle_compare(classification, messages)
+            catalog_map = _catalog_url_map(load_catalog())
+            rec_dicts = [r.model_dump() for r in response.recommendations]
+            valid_dicts = validate_recommendations(rec_dicts, catalog_map)
+            response.recommendations = [Recommendation.model_validate(r) for r in valid_dicts]
+            return response
         else:
             return handle_refuse(classification, messages)
 

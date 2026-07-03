@@ -14,7 +14,7 @@ from typing import Literal, Sequence
 
 from dotenv import load_dotenv
 from groq import Groq
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 from system_prompt import SYSTEM_PROMPT
 
 
@@ -31,6 +31,11 @@ class Constraints(BaseModel):
     remote_required: bool | None = None
     adaptive_required: bool | None = None
 
+    @field_validator("skills", "test_types", mode="before")
+    @classmethod
+    def _empty_list_if_null(cls, v: object) -> list[str]:
+        return [] if v is None else v
+
 
 class ClassificationResult(BaseModel):
     intent: Intent
@@ -38,13 +43,18 @@ class ClassificationResult(BaseModel):
     compare_assessments: list[str] = Field(default_factory=list)
     rationale: str
 
+    @field_validator("compare_assessments", mode="before")
+    @classmethod
+    def _empty_compare_if_null(cls, v: object) -> list[str]:
+        return [] if v is None else v
+
 
 class ChatMessage(BaseModel):
     role: Literal["system", "user", "assistant"]
     content: str
 
 
-CLASSIFIER_MODEL = "llama-3.3-70b-versatile"
+CLASSIFIER_MODEL = "llama-3.1-8b-instant"
 MAX_RETRIES = 3
 INITIAL_BACKOFF_SEC = 1.5
 MAX_TOTAL_RETRY_SECONDS = 10.0
@@ -102,6 +112,17 @@ def _classifier_prompt(messages: Sequence[ChatMessage]) -> str:
         "  OR (duration preference) OR (remote/adaptive preference) OR (language).\n"
         "- If the user asks for recommendations but only provides a vague role like\n"
         "  'developer role' with no additional constraints, classify as CLARIFY_NEEDED.\n"
+        "\n"
+        "Ambiguity rule (CLARIFY_NEEDED even when role + other constraints exist):\n"
+        "- If the role or JD mentions MULTIPLE distinct sub-specializations or stacks\n"
+        "  without the user stating which takes priority for test selection, classify as\n"
+        "  CLARIFY_NEEDED and ask which dimension matters most. Examples:\n"
+        "  * Full-stack JD listing both frontend (e.g. Angular/React) AND backend\n"
+        "    (e.g. Java/Spring/SQL) tech without saying which is primary.\n"
+        "  * Bilingual/multilingual hiring where assessment language is unclear\n"
+        "    (e.g. Spanish-speaking candidates but English knowledge tests not ruled in/out).\n"
+        "- Do NOT RECOMMEND until the user resolves which sub-specialization or language\n"
+        "  split should drive the shortlist.\n"
         "\n"
         "Example (must classify as CLARIFY_NEEDED):\n"
         'User: "Recommend an assessment for a developer role."\n'
@@ -249,6 +270,87 @@ def _is_off_topic_refusal(text: str) -> bool:
     return False
 
 
+def _is_ambiguous_specialization(text: str) -> bool:
+    t = text.lower()
+    frontend = ("angular", "react", "frontend", "front-end", "javascript", "vue")
+    backend = ("java", "spring", "sql", "backend", "back-end", "microservice")
+    has_front = any(k in t for k in frontend)
+    has_back = any(k in t for k in backend)
+    if has_front and has_back:
+        priority_markers = (
+            "backend-leaning",
+            "frontend-heavy",
+            "frontend heavy",
+            "backend heavy",
+            "backend leaning",
+            "balanced full-stack",
+            "true balanced",
+            "primary",
+            "day-one priorities",
+        )
+        if not any(m in t for m in priority_markers):
+            return True
+    if ("bilingual" in t or "spanish" in t) and "english" in t:
+        language_resolved = any(
+            m in t
+            for m in (
+                "hybrid",
+                "english fluent",
+                "english-only",
+                "personality-only in spanish",
+                "knowledge tests in english",
+                "go with the hybrid",
+            )
+        )
+        if not language_resolved:
+            return True
+    if "bilingual" in t or re.search(r"assessed in spanish|spanish[- ]speaking", t):
+        language_resolved = any(
+            m in t
+            for m in (
+                "hybrid",
+                "english fluent",
+                "english-only",
+                "personality-only in spanish",
+                "knowledge tests in english",
+                "go with the hybrid",
+                "functionally bilingual",
+            )
+        )
+        if not language_resolved:
+            return True
+    return False
+
+
+def _has_enough_constraints(constraints: Constraints) -> bool:
+    c = constraints
+    if not c.role:
+        return False
+    return bool(
+        c.seniority
+        or c.skills
+        or c.test_types
+        or c.language
+        or c.max_duration_minutes is not None
+        or c.remote_required is not None
+        or c.adaptive_required is not None
+    )
+
+
+def _extract_compare_names(text: str) -> list[str]:
+    low = text.lower()
+    if "opq" in low and "sales report" in low:
+        return ["OPQ", "OPQ MQ Sales Report"]
+    if "dsi" in low and "safety" in low and "dependability" in low:
+        return ["DSI", "Safety & Dependability 8.0"]
+    if "contact center call simulation" in low and "customer service phone" in low:
+        return ["Contact Center Call Simulation", "Customer Service Phone Simulation"]
+    match = re.search(r"difference between (.+?) and (.+?)[\?.!]*$", text, re.I)
+    if match:
+        return [match.group(1).strip(), match.group(2).strip()]
+    return []
+
+
 def _postprocess_classification(
     messages: Sequence[ChatMessage], result: ClassificationResult
 ) -> ClassificationResult:
@@ -260,12 +362,50 @@ def _postprocess_classification(
 
     text = last_user.content
 
+    # Compare questions should not be swallowed by CLARIFY/RECOMMEND.
+    compare_markers = ("difference between", " vs ", " versus ", "compare ")
+    if any(m in text.lower() for m in compare_markers):
+        result.intent = "COMPARE"
+        if not result.compare_assessments:
+            result.compare_assessments = _extract_compare_names(text)
+        result.rationale = (result.rationale or "") + " Post-processed to COMPARE."
+        return result
+
     # Hard safety override for obvious off-topic/injection/legal requests.
     if _is_off_topic_refusal(text):
         result.intent = "REFUSE"
         if not result.rationale:
             result.rationale = "Message is off-topic or unsafe for this assistant scope."
         return result
+
+    # Org-wide audit/reskill requests with a named function are actionable.
+    if result.intent == "CLARIFY_NEEDED" and result.constraints.role:
+        if any(k in text.lower() for k in ("re-skill", "reskill", "talent audit", "annual audit")):
+            result.intent = "RECOMMEND"
+            result.rationale = (
+                (result.rationale or "") + " Post-processed to RECOMMEND: org audit/reskill with role."
+            ).strip()
+
+    # Ambiguous multi-stack or language split: clarify before recommending.
+    full_user_text = " ".join(m.content for m in messages if m.role == "user")
+    if result.intent == "RECOMMEND" and _is_ambiguous_specialization(full_user_text):
+        result.intent = "CLARIFY_NEEDED"
+        result.rationale = (
+            (result.rationale or "")
+            + " Post-processed to CLARIFY_NEEDED: conflicting sub-specializations or "
+            "assessment language not resolved."
+        ).strip()
+
+    # Promote to RECOMMEND when constraints are sufficient and not ambiguous.
+    if (
+        result.intent == "CLARIFY_NEEDED"
+        and _has_enough_constraints(result.constraints)
+        and not _is_ambiguous_specialization(full_user_text)
+    ):
+        result.intent = "RECOMMEND"
+        result.rationale = (
+            (result.rationale or "") + " Post-processed to RECOMMEND: sufficient constraints."
+        ).strip()
 
     # If recommendations were already provided and user adds/changes constraints,
     # force REFINE even if model predicts RECOMMEND.
