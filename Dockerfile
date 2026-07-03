@@ -21,4 +21,4 @@ COPY data/catalog.json data/catalog.index data/catalog_ids.json data/catalog_ind
 ENV PYTHONPATH=/app
 EXPOSE 8000
 
-CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}"]
+CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port ${PORT:-8080}"]
