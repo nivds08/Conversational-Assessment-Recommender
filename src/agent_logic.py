@@ -94,6 +94,39 @@ def _to_recommendations(entries: list[dict]) -> list[Recommendation]:
     return recs
 
 
+def _is_meta_product(entry: dict) -> bool:
+    """Heuristic for non-assessment meta products (guides/reports/cards)."""
+    name = (entry.get("name") or "").lower()
+    meta_markers = (
+        " report",
+        " guide",
+        " profiler cards",
+        " participant report",
+        " manager report",
+        " development report",
+        " interview guide",
+        " job profiling guide",
+    )
+    return any(marker in name for marker in meta_markers)
+
+
+def _query_allows_meta_products(query: str, classification: ClassificationResult) -> bool:
+    text = query.lower()
+    if any(k in text for k in ("report", "guide", "development", "leadership potential", "opq", "hipo")):
+        return True
+    # If user explicitly asks for competencies category, reports can be relevant.
+    return any(t.lower() == "competencies" for t in classification.constraints.test_types)
+
+
+def _suppress_meta_products(
+    entries: list[dict], query: str, classification: ClassificationResult
+) -> list[dict]:
+    if _query_allows_meta_products(query, classification):
+        return entries
+    filtered = [e for e in entries if not _is_meta_product(e)]
+    return filtered or entries
+
+
 def _catalog_url_map(catalog_entries: list[dict]) -> dict[str, dict]:
     return {e["url"]: e for e in catalog_entries}
 
@@ -160,6 +193,7 @@ def handle_clarify_needed(classification: ClassificationResult, messages: list[d
 def handle_recommend(classification: ClassificationResult, messages: list[dict]) -> AgentResponse:
     query = _constraints_to_query(classification)
     raw = retrieve(query, k=10)
+    raw = _suppress_meta_products(raw, query, classification)
     filtered = _hard_filter_results(raw, classification)
     recommendations = _to_recommendations(filtered)
     reply = f"I found {len(recommendations)} matching SHL assessments based on your constraints."
@@ -170,6 +204,7 @@ def handle_refine(classification: ClassificationResult, messages: list[dict]) ->
     # classify_turn uses full message history, so constraints are cumulative across turns.
     query = _constraints_to_query(classification)
     raw = retrieve(query, k=10)
+    raw = _suppress_meta_products(raw, query, classification)
     filtered = _hard_filter_results(raw, classification)
     recommendations = _to_recommendations(filtered)
     reply = f"Updated shortlist with your new constraints; I now have {len(recommendations)} matches."
@@ -284,6 +319,8 @@ def generate_agent_response(messages: list[dict]) -> AgentResponse:
         rec_dicts = [r.model_dump() for r in response.recommendations]
         valid_dicts = validate_recommendations(rec_dicts, catalog_map)
         response.recommendations = [Recommendation.model_validate(r) for r in valid_dicts]
+        if classification.intent in ("RECOMMEND", "REFINE") and response.recommendations:
+            response.end_of_conversation = True
         return response
     except Exception as exc:
         print(f"[warn] Falling back to safe response due to upstream error: {exc}")

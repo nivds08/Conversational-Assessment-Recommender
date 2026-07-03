@@ -183,7 +183,8 @@ def classify_turn(messages: Sequence[dict] | Sequence[ChatMessage]) -> Classific
                     data = json.loads(raw[start : end + 1])
                 else:
                     raise
-            return ClassificationResult.model_validate(data)
+            result = ClassificationResult.model_validate(data)
+            return _postprocess_classification(msgs, result)
         except Exception as exc:
             last_exc = exc
             if _is_rate_limit_error(exc) and attempt < MAX_RETRIES - 1:
@@ -195,4 +196,88 @@ def classify_turn(messages: Sequence[dict] | Sequence[ChatMessage]) -> Classific
             raise
 
     raise RuntimeError(f"classify_turn failed after retries: {last_exc}") from last_exc
+
+
+def _has_prior_recommendation(messages: Sequence[ChatMessage]) -> bool:
+    for m in messages:
+        if m.role != "assistant":
+            continue
+        text = m.content.lower()
+        if any(
+            marker in text
+            for marker in (
+                "here are",
+                "shortlist",
+                "matching shl assessments",
+                "recommend",
+                "i found",
+            )
+        ):
+            return True
+    return False
+
+
+def _is_refinement_turn(text: str) -> bool:
+    t = text.lower()
+    return any(
+        marker in t
+        for marker in (
+            "must be",
+            "make it",
+            "only",
+            "instead",
+            "also",
+            "under ",
+            "less than",
+            "remote",
+            "adaptive",
+            "english",
+            "duration",
+        )
+    )
+
+
+def _is_off_topic_refusal(text: str) -> bool:
+    t = text.lower()
+    if any(k in t for k in ("ignore all previous instructions", "tell me a joke", "hack")):
+        return True
+    # Generic advice queries that are not about SHL assessment recommendation.
+    if "best programming language" in t:
+        return True
+    if any(k in t for k in ("legal advice", "hiring law", "policy advice")):
+        return True
+    return False
+
+
+def _postprocess_classification(
+    messages: Sequence[ChatMessage], result: ClassificationResult
+) -> ClassificationResult:
+    if not messages:
+        return result
+    last_user = next((m for m in reversed(messages) if m.role == "user"), None)
+    if not last_user:
+        return result
+
+    text = last_user.content
+
+    # Hard safety override for obvious off-topic/injection/legal requests.
+    if _is_off_topic_refusal(text):
+        result.intent = "REFUSE"
+        if not result.rationale:
+            result.rationale = "Message is off-topic or unsafe for this assistant scope."
+        return result
+
+    # If recommendations were already provided and user adds/changes constraints,
+    # force REFINE even if model predicts RECOMMEND.
+    if (
+        result.intent == "RECOMMEND"
+        and _has_prior_recommendation(messages)
+        and _is_refinement_turn(text)
+    ):
+        result.intent = "REFINE"
+        if result.rationale:
+            result.rationale = f"{result.rationale} (post-processed to REFINE due to prior shortlist + constraint update)"
+        else:
+            result.rationale = "Post-processed to REFINE due to prior shortlist and new constraints."
+    return result
 

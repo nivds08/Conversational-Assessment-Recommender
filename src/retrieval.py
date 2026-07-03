@@ -160,3 +160,14 @@ def example_embedding_texts(n: int = 3) -> list[dict[str, str]]:
         {"name": entry["name"], "embedding_text": build_embedding_text(entry)}
         for entry in samples
     ]
+
+
+def warmup_retrieval() -> dict[str, int | str]:
+    """Load model + index + catalog once at startup."""
+    _get_embed_model()
+    index, _, catalog_by_id = _load_index_resources()
+    return {
+        "catalog_entries": len(catalog_by_id),
+        "index_size": int(index.ntotal),
+        "embedding_model": EMBEDDING_MODEL,
+    }
