@@ -39,7 +39,7 @@ curl -X POST http://127.0.0.1:8000/chat \
   -d "{\"messages\":[{\"role\":\"user\",\"content\":\"mid-level Java developer, under 30 minutes\"}]}"
 ```
 
-Interactive docs: http://127.0.0.1:8000/docs
+Interactive docs: http://127.0.0.1:8000/docs](https://conversational-assessment-recommender-production-4cb3.up.railway.app/docs)
 
 ## API contract
 
