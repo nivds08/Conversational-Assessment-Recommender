@@ -2,7 +2,15 @@
 
 A conversational API that helps hiring managers find relevant SHL assessments through multi-turn dialogue. The agent clarifies vague requests, recommends catalog-grounded shortlists, supports refinement and comparison, and refuses off-topic queries.
 
-**Live API:** _(set after Render deploy — e.g. `https://shl-assessment-recommender.onrender.com`)_
+**Live API:** https://conversational-assessment-recommender-yr8k.onrender.com
+
+| Endpoint | URL |
+|---|---|
+| Health | https://conversational-assessment-recommender-yr8k.onrender.com/health |
+| Chat | `POST` https://conversational-assessment-recommender-yr8k.onrender.com/chat |
+| API docs | https://conversational-assessment-recommender-yr8k.onrender.com/docs |
+
+First request after idle on Render free tier may take ~30–50s (cold start).
 
 ## Stack
 
@@ -39,7 +47,17 @@ curl -X POST http://127.0.0.1:8000/chat \
   -d "{\"messages\":[{\"role\":\"user\",\"content\":\"mid-level Java developer, under 30 minutes\"}]}"
 ```
 
-Interactive docs:https://conversational-assessment-recommender-production-4cb3.up.railway.app/docs
+Interactive docs (local): http://127.0.0.1:8000/docs
+
+**Production smoke test:**
+
+```bash
+curl https://conversational-assessment-recommender-yr8k.onrender.com/health
+
+curl -X POST https://conversational-assessment-recommender-yr8k.onrender.com/chat \
+  -H "Content-Type: application/json" \
+  -d "{\"messages\":[{\"role\":\"user\",\"content\":\"mid-level Java developer, under 30 minutes\"}]}"
+```
 
 ## API contract
 
@@ -117,10 +135,10 @@ Trace replay requires the server running: `uvicorn main:app --port 8000`
    - `GROQ_API_KEY` (required)
    - `HF_TOKEN` (recommended — [Hugging Face read token](https://huggingface.co/settings/tokens); avoids unauthenticated Hub warnings and rate limits)
 4. Deploy. Render injects `PORT`; the Dockerfile binds uvicorn to `${PORT}`.
-5. Smoke test (first request after idle may take ~30–50s on free tier):
+5. Smoke test:
 
 ```bash
-curl https://YOUR-SERVICE.onrender.com/health
+curl https://conversational-assessment-recommender-yr8k.onrender.com/health
 ```
 
 Free tier spins down after inactivity; cold start is within the assignment’s ~2-minute `/health` allowance.
