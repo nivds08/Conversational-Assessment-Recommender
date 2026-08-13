@@ -2,7 +2,7 @@
 
 A conversational API that helps hiring managers find relevant SHL assessments through multi-turn dialogue. The agent clarifies vague requests, recommends catalog-grounded shortlists, supports refinement and comparison, and refuses off-topic queries.
 
-**Live API:** https://conversational-assessment-recommender-production-4cb3.up.railway.app
+**Live API:** _(set after Render deploy — e.g. `https://shl-assessment-recommender.onrender.com`)_
 
 ## Stack
 
@@ -12,7 +12,7 @@ A conversational API that helps hiring managers find relevant SHL assessments th
 | Intent classification | Groq (`llama-3.1-8b-instant`) |
 | Retrieval | sentence-transformers (`all-MiniLM-L6-v2`) + FAISS |
 | Catalog | 369 filtered SHL individual tests (`data/catalog.json`) |
-| Deploy | Docker on Railway |
+| Deploy | Docker on Render (Blueprint: `render.yaml`) |
 
 ## Quick start (local)
 
@@ -21,7 +21,7 @@ python -m venv .venv
 .venv\Scripts\activate          # Windows
 pip install -r requirements.txt
 
-cp .env.example .env            # add GROQ_API_KEY
+cp .env.example .env            # add GROQ_API_KEY and optionally HF_TOKEN
 uvicorn main:app --reload --port 8000
 ```
 
@@ -93,7 +93,8 @@ src/                    Agent, classifier, retrieval
 data/                   catalog.json, FAISS index (prebuilt)
 scripts/                Catalog prep, retrieval tests, trace replay
 traces/                 Evaluation conversation transcripts (C1–C10)
-Dockerfile              Baked model + index for fast Railway cold starts
+Dockerfile              Baked model + index for fast cold starts
+render.yaml             Render Blueprint (Docker web service)
 ```
 
 ## Scripts
@@ -107,19 +108,28 @@ python scripts/test_traces.py          # replay traces vs live /chat (Recall@10)
 
 Trace replay requires the server running: `uvicorn main:app --port 8000`
 
-## Deployment (Railway)
+## Deployment (Render)
 
-1. Connect GitHub repo to Railway
-2. Set `GROQ_API_KEY` in service variables
-3. Clear any custom start command (Dockerfile `CMD` handles `$PORT`)
-4. Generate public domain (port **8080**)
+1. Push this repo to GitHub (see steps below).
+2. Go to [render.com](https://render.com) → **New** → **Blueprint** (uses `render.yaml`)  
+   **or** **New** → **Web Service** → connect repo → set **Environment** to **Docker**.
+3. In **Environment**, add:
+   - `GROQ_API_KEY` (required)
+   - `HF_TOKEN` (recommended — [Hugging Face read token](https://huggingface.co/settings/tokens); avoids unauthenticated Hub warnings and rate limits)
+4. Deploy. Render injects `PORT`; the Dockerfile binds uvicorn to `${PORT}`.
+5. Smoke test (first request after idle may take ~30–50s on free tier):
 
-The Docker image bakes the embedding model and FAISS index at build time so startup stays fast.
+```bash
+curl https://YOUR-SERVICE.onrender.com/health
+```
+
+Free tier spins down after inactivity; cold start is within the assignment’s ~2-minute `/health` allowance.
 
 ## Environment
 
 | Variable | Required | Description |
 |---|---|---|
 | `GROQ_API_KEY` | Yes | Groq API key for intent classification |
+| `HF_TOKEN` | Recommended | Hugging Face token for `sentence-transformers` / Hub (read scope). Set in Render **and** local `.env`. Alias: `HUGGINGFACE_HUB_TOKEN` |
 
 See `.env.example`.

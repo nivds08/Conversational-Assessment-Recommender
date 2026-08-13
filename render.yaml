@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: shl-assessment-recommender
+    env: docker
+    plan: free
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: HF_TOKEN
+        sync: false
