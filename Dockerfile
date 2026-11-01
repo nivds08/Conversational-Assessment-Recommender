@@ -20,6 +20,7 @@ RUN python -c "from sentence_transformers import SentenceTransformer; SentenceTr
 COPY main.py .
 COPY src/ ./src/
 COPY data/catalog.json data/catalog.index data/catalog_ids.json data/catalog_index_meta.json ./data/
+COPY static/ ./static/
 
 ENV PYTHONPATH=/app:/app/src
 # Render/Railway inject PORT at runtime; default for local docker run only.

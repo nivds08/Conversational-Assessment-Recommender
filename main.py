@@ -10,6 +10,7 @@ load_dotenv(Path(__file__).resolve().parent / ".env")
 
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 from pydantic import BaseModel, ValidationError
 
 from src.agent_logic import SAFE_FALLBACK_RESPONSE, generate_agent_response
@@ -68,9 +69,16 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+STATIC_DIR = Path(__file__).resolve().parent / "static"
 
-@app.get("/")
-async def root() -> dict[str, str]:
+
+@app.get("/", include_in_schema=False)
+async def root() -> FileResponse:
+    return FileResponse(STATIC_DIR / "index.html")
+
+
+@app.get("/api")
+async def api_info() -> dict[str, str]:
     return {
         "service": "SHL Assessment Recommender",
         "health": "/health",
